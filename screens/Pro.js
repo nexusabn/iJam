@@ -27,35 +27,27 @@ export default class Pro extends React.Component {
             <Block>
               <Block >
                 <Block>
-                  <Text color="white" size={60}>Unlock</Text>
+                  <Text color="white" size={60}>Under</Text>
                 </Block>
                 <Block>
-                  <Text color="white" size={60}>Material</Text>
+                  <Text color="white" size={55}>Construction</Text>
                 </Block>
-                <Block row>
-                  <Text color="white" size={60}>Kit</Text>
-                  <Block middle style={styles.pro}>
-                    <Text size={16} color="white">PRO</Text>
-                  </Block>
-                </Block>
+                
               </Block>
               <Text size={16} color='rgba(255,255,255,0.6)'>
-                Take advantage of all the features and screens made upon Galio Design System, coded on React Native for both.
+                This page is under construction. We are working daily to add new features to the app.
               </Text>
               <Block row style={{ marginTop: theme.SIZES.BASE * 1.5, marginBottom: theme.SIZES.BASE * 4 }}>
                 <Image
-                  source={require('../assets/images/ios.png')}
-                  style={{ height: 38, width: 82, marginRight: theme.SIZES.BASE * 1.5 }} />
-                <Image
-                  source={require('../assets/images/android.png')}
-                  style={{ height: 38, width: 140 }} />
+                  source={require('../assets/images/jamup-png.png')}
+                  style={{ height: 75, width: 250, marginRight: theme.SIZES.BASE * 1.5 }} />
               </Block>
               <Button
                 shadowless
                 style={styles.button}
                 color={materialTheme.COLORS.BUTTON_COLOR}
                 onPress={() => navigation.navigate('Home')}>
-                GET PRO VERSION
+                Go Back!
               </Button>
             </Block>
           </Block>

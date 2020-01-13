@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, StatusBar, Dimensions, Platform } from 'react-native';
+import { ImageBackground, Image, StyleSheet, StatusBar, Dimensions, Platform } from 'react-native';
 import { Block, Button, Text, theme } from 'galio-framework';
 
 const { height, width } = Dimensions.get('screen');
@@ -23,14 +23,16 @@ export default class Onboarding extends React.Component {
         <Block flex space="between" style={styles.padded}>
           <Block flex space="around" style={{ zIndex: 2 }}>
             <Block>
-              <Block>
-                <Text color="white" size={60}>Material</Text>
-              </Block>
-              <Block row>
-                <Text color="white" size={60}>Kit</Text>
+              {/* <Block>
+                <Text color="white" size={60}>JamUP!</Text>
+              </Block> */}
+              <Block row style={{ marginTop: theme.SIZES.BASE * 1.5, marginBottom: theme.SIZES.BASE * 1.5 }}>
+                <Image
+                  source={require('../assets/images/jamup-png.png')}
+                  style={{ height: 75, width: 250, marginRight: theme.SIZES.BASE * 2 }} />
               </Block>
               <Text size={16} color='rgba(255,255,255,0.6)'>
-                Fully coded React Native components.
+                Connect with Jammers around you!
               </Text>
             </Block>
             <Block center>
