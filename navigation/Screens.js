@@ -10,6 +10,10 @@ import OnboardingScreen from '../screens/Onboarding';
 import ProfileScreen from '../screens/Profile';
 import ProScreen from '../screens/Pro';
 import SettingsScreen from '../screens/Settings';
+import ChatScreen from '../screens/Chat';
+import CreateJamScreen from '../screens/Createjam';
+import JammersListScreen from '../screens/Jammerslist';
+import OpenJamsScreen from '../screens/Openjams';
 
 import Menu from './Menu';
 import Header from '../components/Header';
@@ -74,6 +78,56 @@ const SettingsStack = createStackNavigator({
   cardStyle: { backgroundColor: '#EEEEEE', },
   transitionConfig,
 });
+
+
+const CreateJamStack = createStackNavigator({
+  Settings: {
+    screen: CreateJamScreen,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="CreateJam" navigation={navigation} />,
+    })
+  },
+}, {
+  cardStyle: { backgroundColor: '#EEEEEE', },
+  transitionConfig,
+});
+
+const JammersListStack = createStackNavigator({
+  Settings: {
+    screen: JammersListScreen,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="JammersList" navigation={navigation} />,
+    })
+  },
+}, {
+  cardStyle: { backgroundColor: '#EEEEEE', },
+  transitionConfig,
+});
+
+const CreateChatStack = createStackNavigator({
+  Settings: {
+    screen: ChatScreen,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="CreateChat" navigation={navigation} />,
+    })
+  },
+}, {
+  cardStyle: { backgroundColor: '#EEEEEE', },
+  transitionConfig,
+});
+
+const CreateOpenJamsStack = createStackNavigator({
+  Settings: {
+    screen: OpenJamsScreen,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="OpenJams" navigation={navigation} />,
+    })
+  },
+}, {
+  cardStyle: { backgroundColor: '#EEEEEE', },
+  transitionConfig,
+});
+
 
 const ComponentsStack = createStackNavigator({
   Components: {
