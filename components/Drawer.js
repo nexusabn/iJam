@@ -5,7 +5,7 @@ import { Block, Text, theme } from "galio-framework";
 import Icon from './Icon';
 import materialTheme from '../constants/Theme';
 
-const proScreens = ['Woman', 'Man', 'Kids', 'Createjam', 'Sign In', 'Sign Up', 'Chat', 'Jammerslist'];
+const proScreens = ['Woman', 'Man', 'Kids', 'Createjam', 'Sign Up'];
 
 class DrawerItem extends React.Component {
   renderIcon = () => {
@@ -48,7 +48,7 @@ class DrawerItem extends React.Component {
         return (
           <Icon
             size={16}
-            name="grid-on"
+            name="grid_on"
             family="material"
             color={focused ? 'white' : materialTheme.COLORS.MUTED} />
         );
@@ -65,21 +65,39 @@ class DrawerItem extends React.Component {
         return (
           <Icon
             size={16}
-            name="gears"
-            family="font-awesome"
-            color={focused ? 'white' : materialTheme.COLORS.MUTED} />
-        );
-
-        case 'Jammerslist':
-        return (
-  
-          <Icon
-            size={16}
-            name="circle-10"
+            name="chat-33"
             family="GalioExtra"
             color={focused ? 'white' : materialTheme.COLORS.MUTED} />
         );
 
+        case 'JammersList':
+          return (
+            <Icon
+              size={16}
+              name="group"
+              family="font-awesome"
+              color={focused ? 'white' : materialTheme.COLORS.MUTED} />
+          );
+
+          case 'CreateJam':
+            return (
+              <Icon
+                size={16}
+                name="calendar-plus-o"
+                family="font-awesome"
+                color={focused ? 'white' : materialTheme.COLORS.MUTED} />
+            );
+            
+            case 'OpenJams':
+              return (
+                <Icon
+                  size={16}
+                  name="calendar-check-o"
+                  family="font-awesome"
+                  color={focused ? 'white' : materialTheme.COLORS.MUTED} />
+              );
+
+          
 
       case 'Settings':
         return (
