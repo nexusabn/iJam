@@ -13,10 +13,11 @@ import SettingsScreen from '../screens/Settings';
 import ChatScreen from '../screens/Chat';
 import CreateJamScreen from '../screens/Createjam';
 import JammersListScreen from '../screens/Jammerslist';
+import NotificationScreen from '../screens/Notifications';
 import OpenJamsScreen from '../screens/Openjams';
 
 import Menu from './Menu';
-import Header from '../components/Header';
+import Header from '../components/default-header-chat-notif';
 import { Drawer } from '../components/';
 
 const transitionConfig = (transitionProps, prevTransitionProps) => ({
@@ -103,6 +104,20 @@ const JammersListStack = createStackNavigator({
   cardStyle: { backgroundColor: '#EEEEEE', },
   transitionConfig,
 });
+
+const NotificationStack = createStackNavigator({
+  Notification: {
+    screen: NotificationScreen,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header title="Notification" navigation={navigation} />,
+    })
+  },
+}, {
+  cardStyle: { backgroundColor: '#EEEEEE', },
+  transitionConfig,
+});
+
+
 
 const CreateChatStack = createStackNavigator({
   CreateChat: {
@@ -192,6 +207,14 @@ const AppStack = createDrawerNavigator(
       navigationOptions: (navOpt) => ({
         drawerLabel: ({focused}) => (
           <Drawer focused={focused} screen="Jammerslist" title="JammersList" />
+        ),
+      }),
+    },
+    Notification: {
+      screen: NotificationStack,
+      navigationOptions: (navOpt) => ({
+        drawerLabel: ({focused}) => (
+          <Drawer focused={focused} screen="Notification" title="Notification" />
         ),
       }),
     },
