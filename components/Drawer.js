@@ -5,7 +5,7 @@ import { Block, Text, theme } from "galio-framework";
 import Icon from './Icon';
 import materialTheme from '../constants/Theme';
 
-const proScreens = ['Woman', 'Man', 'Kids', 'Createjam', 'Sign Up'];
+const proScreens = ['Woman', 'Man', 'Kids', 'Sign Up'];
 
 class DrawerItem extends React.Component {
   renderIcon = () => {
@@ -44,14 +44,6 @@ class DrawerItem extends React.Component {
             family="GalioExtra"
             color={focused ? 'white' : materialTheme.COLORS.MUTED} />
         );
-      case 'Createjam':
-        return (
-          <Icon
-            size={16}
-            name="grid_on"
-            family="material"
-            color={focused ? 'white' : materialTheme.COLORS.MUTED} />
-        );
       case 'Profile':
         return (
           <Icon
@@ -70,32 +62,32 @@ class DrawerItem extends React.Component {
             color={focused ? 'white' : materialTheme.COLORS.MUTED} />
         );
 
-        case 'JammersList':
-          return (
-            <Icon
-              size={16}
-              name="group"
-              family="font-awesome"
-              color={focused ? 'white' : materialTheme.COLORS.MUTED} />
-          );
+      case 'JammersList':
+        return (
+          <Icon
+            size={16}
+            name="group"
+            family="font-awesome"
+            color={focused ? 'white' : materialTheme.COLORS.MUTED} />
+        );
 
-          case 'CreateJam':
-            return (
-              <Icon
-                size={16}
-                name="calendar-plus-o"
-                family="font-awesome"
-                color={focused ? 'white' : materialTheme.COLORS.MUTED} />
-            );
-            
-            case 'OpenJams':
-              return (
-                <Icon
-                  size={16}
-                  name="calendar-check-o"
-                  family="font-awesome"
-                  color={focused ? 'white' : materialTheme.COLORS.MUTED} />
-              );
+      case 'CreateJam':
+        return (
+          <Icon
+            size={16}
+            name="calendar-plus-o"
+            family="font-awesome"
+            color={focused ? 'white' : materialTheme.COLORS.MUTED} />
+        );
+        
+      case 'OpenJams':
+        return (
+          <Icon
+            size={16}
+            name="calendar-check-o"
+            family="font-awesome"
+            color={focused ? 'white' : materialTheme.COLORS.MUTED} />
+        );
 
           
 

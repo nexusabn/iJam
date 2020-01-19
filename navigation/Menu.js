@@ -37,10 +37,10 @@ const Drawer = (props) => (
 
 const profile = {
   avatar: Images.Profile,
-  name: 'Rachel Brown',
-  type: 'Seller',
+  name: 'Abhiyan Sapkota',
+  type: 'Jammer',
   plan: 'Pro',
-  rating: 4.8
+  rating: 4.9
 };
 
 const Menu = {
