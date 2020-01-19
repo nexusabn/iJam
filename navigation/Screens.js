@@ -81,7 +81,7 @@ const SettingsStack = createStackNavigator({
 
 
 const CreateJamStack = createStackNavigator({
-  Settings: {
+  CreateJam: {
     screen: CreateJamScreen,
     navigationOptions: ({ navigation }) => ({
       header: <Header title="CreateJam" navigation={navigation} />,
@@ -93,7 +93,7 @@ const CreateJamStack = createStackNavigator({
 });
 
 const JammersListStack = createStackNavigator({
-  Settings: {
+  JammersList: {
     screen: JammersListScreen,
     navigationOptions: ({ navigation }) => ({
       header: <Header title="JammersList" navigation={navigation} />,
@@ -105,7 +105,7 @@ const JammersListStack = createStackNavigator({
 });
 
 const CreateChatStack = createStackNavigator({
-  Settings: {
+  CreateChat: {
     screen: ChatScreen,
     navigationOptions: ({ navigation }) => ({
       header: <Header title="CreateChat" navigation={navigation} />,
@@ -117,7 +117,7 @@ const CreateChatStack = createStackNavigator({
 });
 
 const CreateOpenJamsStack = createStackNavigator({
-  Settings: {
+  OpenJams: {
     screen: OpenJamsScreen,
     navigationOptions: ({ navigation }) => ({
       header: <Header title="OpenJams" navigation={navigation} />,
@@ -179,35 +179,35 @@ const AppStack = createDrawerNavigator(
         )
       }
     },
-    Woman: {
-      screen: ProScreen,
+    CreateJam: {
+      screen: CreateJamStack,
+      navigationOptions: {      
+      drawerLabel: ({focused}) => (
+          <Drawer focused={focused} screen="Createjam" title="CreateJam" />
+        )
+      }
+    },
+    JammersList: {
+      screen: JammersListStack,
       navigationOptions: (navOpt) => ({
         drawerLabel: ({focused}) => (
-          <Drawer focused={focused} screen="Pro" title="Woman" />
+          <Drawer focused={focused} screen="Jammerslist" title="JammersList" />
         ),
       }),
     },
-    Man: {
-      screen: ProScreen,
+    Chat: {
+      screen: CreateChatStack,
       navigationOptions: (navOpt) => ({
         drawerLabel: ({focused}) => (
-          <Drawer focused={focused} screen="Pro" title="Man" />
+          <Drawer focused={focused} screen="Chat" title="Chat" />
         ),
       }),
     },
-    Kids: {
-      screen: ProScreen,
+    OpenJams: {
+      screen: CreateOpenJamsStack,
       navigationOptions: (navOpt) => ({
         drawerLabel: ({focused}) => (
-          <Drawer focused={focused} screen="Pro" title="Kids" />
-        ),
-      }),
-    },
-    NewCollection: {
-      screen: ProScreen,
-      navigationOptions: (navOpt) => ({
-        drawerLabel: ({focused}) => (
-          <Drawer focused={focused} screen="Pro" title="New Collection" />
+          <Drawer focused={focused} screen="Pro" title="OpenJams" />
         ),
       }),
     },

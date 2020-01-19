@@ -5,7 +5,7 @@ import { Block, Text, theme } from "galio-framework";
 import Icon from './Icon';
 import materialTheme from '../constants/Theme';
 
-const proScreens = ['Woman', 'Man', 'Kids', 'New Collection', 'Sign In', 'Sign Up'];
+const proScreens = ['Woman', 'Man', 'Kids', 'Createjam', 'Sign In', 'Sign Up', 'Chat', 'Jammerslist'];
 
 class DrawerItem extends React.Component {
   renderIcon = () => {
@@ -44,7 +44,7 @@ class DrawerItem extends React.Component {
             family="GalioExtra"
             color={focused ? 'white' : materialTheme.COLORS.MUTED} />
         );
-      case 'New Collection':
+      case 'Createjam':
         return (
           <Icon
             size={16}
@@ -60,6 +60,27 @@ class DrawerItem extends React.Component {
             family="GalioExtra"
             color={focused ? 'white' : materialTheme.COLORS.MUTED} />
         );
+        
+      case 'Chat':
+        return (
+          <Icon
+            size={16}
+            name="gears"
+            family="font-awesome"
+            color={focused ? 'white' : materialTheme.COLORS.MUTED} />
+        );
+
+        case 'Jammerslist':
+        return (
+  
+          <Icon
+            size={16}
+            name="circle-10"
+            family="GalioExtra"
+            color={focused ? 'white' : materialTheme.COLORS.MUTED} />
+        );
+
+
       case 'Settings':
         return (
           <Icon
