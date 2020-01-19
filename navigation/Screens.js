@@ -241,11 +241,11 @@ const AppStack = createDrawerNavigator(
         drawerLabel: () => <Block style={{marginVertical: 8}}><Text>{` `}</Text></Block>,
       },
     },
-    SignIn: {
+    SignOut: {
       screen: ProScreen,
       navigationOptions: (navOpt) => ({
         drawerLabel: ({focused}) => (
-          <Drawer focused={focused} screen="Pro" title="Sign In" />
+          <Drawer focused={focused} screen="Pro" title="Sign Out" />
         ),
       }),
     },
