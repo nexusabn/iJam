@@ -34,9 +34,6 @@ const ChatButton = ({isWhite, style, navigation}) => (
 );
 
 
-
-
-
 class Header extends React.Component {
   handleLeftPress = () => {
     const { back, navigation } = this.props;
@@ -56,97 +53,100 @@ class Header extends React.Component {
 
  //Change here according to screen names for chat/notif settings for individual pages
     switch (routeName) {
-      case 'Home':
-        return ([
-          <ChatButton key='chat-home' navigation={navigation} isWhite={white} />,
-          <NotificationButton key='basket-home' navigation={navigation} isWhite={white} />
-        ]);
-      case 'CreateJam':
-        return ([
-          <ChatButton key='chat-categories' navigation={navigation} />,
-          <NotificationButton key='basket-categories' navigation={navigation} />
-        ]);
-      case 'JammersList':
-        return ([
-          <ChatButton key='chat-categories' navigation={navigation} isWhite={white} />,
-          <NotificationButton key='basket-categories' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Notification':
-        return ([
-          <ChatButton key='chat-deals' navigation={navigation} isWhite={white} />,
-          <NotificationButton key='basket-deals' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Openjams':
-        return ([
-          <ChatButton key='chat-profile' navigation={navigation} isWhite={white} />,
-          <NotificationButton key='basket-deals' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Profile':
-        return ([
-          <NotificationButton key='basket-product' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Settings':
-        return ([
-          <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
-          <NotificationButton key='basket-search' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Components':
-        return ([
-          <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
-          <NotificationButton key='basket-search' navigation={navigation} isWhite={white} />
-        ]);
+    //   case 'Home':
+    //     return ([
+    //       <ChatButton key='chat-home' navigation={navigation} isWhite={white} />,
+    //       <NotificationButton key='basket-home' navigation={navigation} isWhite={white} />
+    //     ]);
+    //   case 'CreateJam':
+    //     return ([
+    //       <ChatButton key='chat-categories' navigation={navigation} />,
+    //       <NotificationButton key='basket-categories' navigation={navigation} />
+    //     ]);
+    //   case 'JammersList':
+    //     return ([
+    //       <ChatButton key='chat-categories' navigation={navigation} isWhite={white} />,
+    //       <NotificationButton key='basket-categories' navigation={navigation} isWhite={white} />
+    //     ]);
+    //   case 'Notification':
+    //     return ([
+    //       <ChatButton key='chat-deals' navigation={navigation} isWhite={white} />,
+    //       <NotificationButton key='basket-deals' navigation={navigation} isWhite={white} />
+    //     ]);
+    //   case 'Openjams':
+    //     return ([
+    //       <ChatButton key='chat-profile' navigation={navigation} isWhite={white} />,
+    //       <NotificationButton key='basket-deals' navigation={navigation} isWhite={white} />
+    //     ]);
+    //   case 'Profile':
+    //     return ([
+    //       <NotificationButton key='basket-product' navigation={navigation} isWhite={white} />
+    //     ]);
+    //   case 'Settings':
+    //     return ([
+    //       <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
+    //       <NotificationButton key='basket-search' navigation={navigation} isWhite={white} />
+    //     ]);
+    //   case 'Components':
+    //     return ([
+    //       <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
+    //       <NotificationButton key='basket-search' navigation={navigation} isWhite={white} />
+    //     ]);
       default:
-        break;
+        return ([
+            <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
+            <NotificationButton key='basket-search' navigation={navigation} isWhite={white} />
+          ]);
     }
   }
 
-  renderSearch = () => {
-    const { navigation } = this.props;
-    return (
-      <Input
-        right
-        color="black"
-        style={styles.search}
-        placeholder="What are you looking for?"
-        onFocus={() => navigation.navigate('Pro')}
-        iconContent={<Icon size={16} color={theme.COLORS.MUTED} name="magnifying-glass" family="entypo" />}
-      />
-    )
-  }
+//   renderSearch = () => {
+//     const { navigation } = this.props;
+//     return (
+//       <Input
+//         right
+//         color="black"
+//         style={styles.search}
+//         placeholder="What are you looking for?"
+//         onFocus={() => navigation.navigate('Pro')}
+//         iconContent={<Icon size={16} color={theme.COLORS.MUTED} name="magnifying-glass" family="entypo" />}
+//       />
+//     )
+//   }
 
-  renderTabs = () => {
-    const { navigation, tabTitleLeft, tabTitleRight } = this.props;
+//   renderTabs = () => {
+//     const { navigation, tabTitleLeft, tabTitleRight } = this.props;
 
-    return (
-      <Block row style={styles.tabs}>
-        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Pro')}>
-          <Block row middle>
-            <Icon name="grid" family="feather" style={{ paddingRight: 8 }} />
-            <Text size={16} style={styles.tabTitle}>{tabTitleLeft || 'Categories'}</Text>
-          </Block>
-        </Button>
-        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
-          <Block row middle>
-            <Icon size={16} name="camera-18" family="GalioExtra" style={{ paddingRight: 8 }} />
-            <Text size={16} style={styles.tabTitle}>{tabTitleRight || 'Best Deals'}</Text>
-          </Block>
-        </Button>
-      </Block>
-    )
-  }
+//     return (
+//       <Block row style={styles.tabs}>
+//         <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Pro')}>
+//           <Block row middle>
+//             <Icon name="grid" family="feather" style={{ paddingRight: 8 }} />
+//             <Text size={16} style={styles.tabTitle}>{tabTitleLeft || 'Categories'}</Text>
+//           </Block>
+//         </Button>
+//         <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
+//           <Block row middle>
+//             <Icon size={16} name="camera-18" family="GalioExtra" style={{ paddingRight: 8 }} />
+//             <Text size={16} style={styles.tabTitle}>{tabTitleRight || 'Best Deals'}</Text>
+//           </Block>
+//         </Button>
+//       </Block>
+//     )
+//   }
 
-  renderHeader = () => {
-    const { search, tabs } = this.props;
-    if (search || tabs) {
-      return (
-        <Block center>
-          {search ? this.renderSearch() : null}
-          {tabs ? this.renderTabs() : null}
-        </Block>
-      )
-    }
-    return null;
-  }
+//   renderHeader = () => {
+//     const { search, tabs } = this.props;
+//     if (search || tabs) {
+//       return (
+//         <Block center>
+//           {/* {search ? this.renderSearch() : null} */}
+//           {/* {tabs ? this.renderTabs() : null} */}
+//         </Block>
+//       )
+//     }
+//     return null;
+//   }
 
   render() {
     const { back, title, white, transparent, navigation } = this.props;
@@ -175,7 +175,7 @@ class Header extends React.Component {
           ]}
           onLeftPress={this.handleLeftPress}
         />
-        {this.renderHeader()}
+        {/* {this.renderHeader()} */}
       </Block>
     );
   }
